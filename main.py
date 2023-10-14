@@ -11,5 +11,9 @@ def encrypt(text,shift):
     c = []
     for i in range(len(x)):
         c.append(x[i]+shift)
-    print(c)
+    #craft of a new word
+    w = []
+    for i in range(len(c)):
+        w.append(alphabet[c[i]])
+    print(w)
 encrypt(text,shift)
