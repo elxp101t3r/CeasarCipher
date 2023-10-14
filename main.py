@@ -3,7 +3,6 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input('Type the shift number:\n'))
 def encrypt(text,shift):
-    #letters position
     x = []
     for i in range(len(text)):
         x.append(alphabet.index(text[i]))
