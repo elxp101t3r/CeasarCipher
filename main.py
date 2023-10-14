@@ -7,17 +7,8 @@ def encrypt(text,shift):
     x = []
     for i in range(len(text)):
         x.append(alphabet.index(text[i]))
-    #new position
-    c = []
-    for i in range(len(x)):
-        c.append(x[i]+shift)
-    #craft of a new word
-    w = []
-    for i in range(len(c)):
-        w.append(alphabet[c[i]])
-    #The new encrypted word
     en_word = ''
-    for i in w:
-        en_word += i
+    for i in range(len(x)):
+        en_word += alphabet[x[i]+shift]
     print(f'The encoded text is: {en_word}')
 encrypt(text,shift)
