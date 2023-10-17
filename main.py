@@ -58,5 +58,10 @@ def caesar(start_text,shift_amount,cipher_direction):
             else:
                 end_text += char
     print(f'The {cipher_direction}d text is {end_text}')
-
-caesar(start_text=text,shift_amount=shift,cipher_direction=direction)
+repeat = 'yes'
+while repeat == 'yes':
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input('Type the shift number:\n'))   
+    caesar(start_text=text,shift_amount=shift,cipher_direction=direction)
+    repeat = input("Do you want to do it again 'yes' or 'no'\n")
