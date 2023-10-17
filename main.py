@@ -1,4 +1,7 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+symbols = ['!','@','#','$','%','^','&','*','(',')','~','-','+']
+space = [' ']
+numbers = ['0','1','2','3','4','5','6','7','8','9']
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input('Type the shift number:\n'))
@@ -42,4 +45,5 @@ def caesar(start_text,shift_amount,cipher_direction):
         new_position = position + shift_amount
         end_text += alphabet[new_position]
     print(f'The {cipher_direction}d text is {end_text}')
+
 caesar(start_text=text,shift_amount=shift,cipher_direction=direction)
